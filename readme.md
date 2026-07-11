@@ -4,15 +4,15 @@ A lightweight terminal UI for real-time Linux system stats, built with [FTXUI](h
 
 ```
 ┌────────────────────────────────────────────┐
-│              System Information             │
-├───────────────┬──────────────────────────────┤
-│ Hostname       │ archlinux                     │
-│ CPU Usage      │ 3.40 GHz  [███████░░░] 62%  │
-│ Used Mem       │ 5.20 GB / 15.60 GB [███░░]  │
-│ Network Speed  │ Download: 128 KB/s          │
-│                │ Upload: 12 KB/s             │
-│ Uptime         │ 2hrs 14mins 6s               │
-└───────────────┴──────────────────────────────┘
+│              System Information            │
+├────────────────┬───────────────────────────┤
+│ Hostname       │ archlinux                 │
+│ CPU Usage      │ 3.40 GHz  [███████░░░] 62%│
+│ Used Mem       │ 5.20 GB / 15.60 GB [███░░]│
+│ Network Speed  │ Download: 128 KB/s        │
+│                │ Upload: 12 KB/s           │
+│ Uptime         │ 2hrs 14mins 6s            │
+└────────────────┴───────────────────────────┘
 ```
 
 ## Features
@@ -45,7 +45,7 @@ cmake --build ./build
 If you choose to build and link FTXUI yourself, ftxui-component must be first in the linking order relative to the other FTXUI libraries, i.e.
 
 ```bash
-g++ main.cpp -lftxui-component -lftxui-dom -lftxui-screen -lpthread -o nfolens
+g++ ./src/main.cpp -lftxui-component -lftxui-dom -lftxui-screen -lpthread -o ./build/main
 ```
 
 ## Usage
