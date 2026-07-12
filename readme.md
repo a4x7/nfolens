@@ -2,18 +2,7 @@
 
 A lightweight terminal UI for real-time Linux system stats, built with [FTXUI](https://github.com/ArthurSonzogni/FTXUI). Reads directly from `/proc` — no external dependencies for data collection.
 
-```
-┌────────────────────────────────────────────┐
-│              System Information            │
-├────────────────┬───────────────────────────┤
-│ Hostname       │ archlinux                 │
-│ CPU Usage      │ 3.40 GHz  [███████░░░] 62%│
-│ Used Mem       │ 5.20 GB / 15.60 GB [███░░]│
-│ Network Speed  │ Download: 128 KB/s        │
-│                │ Upload: 12 KB/s           │
-│ Uptime         │ 2hrs 14mins 6s            │
-└────────────────┴───────────────────────────┘
-```
+![screenshot-nfolens](https://github.com/a4x7/nfolens/blob/main/assets/image.png)
 
 ## Features
 
