@@ -7,6 +7,7 @@
 #include <chrono>
 #include <cstdint>
 #include <atomic>
+#include <stdexcept>
 
 struct system_info{
     std::string hostname;
@@ -105,7 +106,9 @@ void ftxui_main(){
         return false; 
     });
     app.Loop(component);
+#ifdef DEBUG
     std::cout << "Exitted render loop\n";
+#endif
 }
 
 void helper1(uint64_t factor){
@@ -260,7 +263,9 @@ void helper1(uint64_t factor){
         if(quit)
             break;
     }
+#ifndef NDEBUG
     std::cout << "Helper thread terminated\n";
+#endif
 }
 
 int main(int argc, char** argv){
@@ -277,10 +282,14 @@ int main(int argc, char** argv){
 
     worker1.join();
     if(!quit){
+#ifndef NDEBUG
         std::cerr << "Program terminated with exit code 1\n";
+#endif
         return 1;
     }
+#ifndef NDEBUG
     std::cout << "Program terminated with exit code 0\n";
+#endif
     return 0;
 
 }

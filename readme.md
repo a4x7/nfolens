@@ -26,7 +26,7 @@ Using CMake with FTXUI fetched as a dependency:
 
 ```bash
 mkdir build
-cmake -S . -B ./build
+cmake -S . -B ./build -DCMAKE_BUILD_TYPE=Release
 cmake --build ./build
 ```
 
@@ -34,7 +34,7 @@ cmake --build ./build
 If you choose to build and link FTXUI yourself, ftxui-component must be first in the linking order relative to the other FTXUI libraries, i.e.
 
 ```bash
-g++ ./src/main.cpp -lftxui-component -lftxui-dom -lftxui-screen -lpthread -o ./build/main
+g++ ./src/main.cpp -O2 -DNDEBUG -lftxui-component -lftxui-dom -lftxui-screen -lpthread -o ./build/main
 ```
 
 ## Usage
